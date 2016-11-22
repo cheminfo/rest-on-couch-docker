@@ -1,6 +1,6 @@
 {
   "name": "roc-docker",
-  "version": "2.0.1",
+  "version": "2.0.2",
   "private": true,
   "dependencies": {
     "rest-on-couch": "2.0.1"
