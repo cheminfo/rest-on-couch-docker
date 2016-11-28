@@ -3,6 +3,6 @@
   "version": "2.1.0",
   "private": true,
   "dependencies": {
-    "rest-on-couch": "2.1.0"
+    "rest-on-couch": "2.1.1"
   }
 }
