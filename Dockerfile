@@ -1,4 +1,4 @@
-FROM node:7-slim
+FROM node:7-alpine
 
 # Install pm2
 RUN npm install -g pm2
