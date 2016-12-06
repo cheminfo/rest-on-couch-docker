@@ -1,7 +1,5 @@
 FROM node:7-slim
 
-MAINTAINER Michaël Zasso <targos@protonmail.com>
-
 # Install pm2
 RUN npm install -g pm2
 
