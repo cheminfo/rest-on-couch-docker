@@ -1,13 +1,18 @@
 FROM node:7-alpine
 
-# Install pm2
-RUN npm install -g pm2
+ENV ROC_VERSION 3.0.0
 
-# Get rest-on-couch
-WORKDIR /git/rest-on-couch
-COPY package.json package.json
-RUN npm install
+RUN apk add --no-cache curl && \
+    curl -fSL https://github.com/cheminfo/rest-on-couch/archive/v$ROC_VERSION.tar.gz -o $ROC_VERSION.tar.gz && \
+    tar -xzf $ROC_VERSION.tar.gz && \
+    mv rest-on-couch-${ROC_VERSION} rest-on-couch-source && \
+    npm install -g yarn pm2 && \
+    cd /rest-on-couch-source && \
+    yarn && \
+    rm -rf /root/.npm /root/.cache /${ROC_VERSION}.tar.gz /rest-on-couch-source/test
 
-# Set home directory
-WORKDIR /rest-on-couch
+ENV NODE_ENV production
 ENV REST_ON_COUCH_HOME_DIR /rest-on-couch
+
+WORKDIR /rest-on-couch-source
+CMD ["yarn", "start"]
