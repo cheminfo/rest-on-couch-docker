@@ -8,7 +8,7 @@ RUN apk add --no-cache curl && \
     mv rest-on-couch-${ROC_VERSION} rest-on-couch-source && \
     npm install -g yarn pm2 && \
     cd /rest-on-couch-source && \
-    yarn && \
+    yarn && yarn run prepare && \
     rm -rf /root/.npm /usr/local/share/.cache /${ROC_VERSION}.tar.gz /rest-on-couch-source/test
 
 ENV NODE_ENV production
