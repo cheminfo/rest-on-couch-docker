@@ -6,7 +6,7 @@ RUN apk add --no-cache curl && \
     curl -fSL https://github.com/cheminfo/rest-on-couch/archive/v$ROC_VERSION.tar.gz -o $ROC_VERSION.tar.gz && \
     tar -xzf $ROC_VERSION.tar.gz && \
     mv rest-on-couch-${ROC_VERSION} rest-on-couch-source && \
-    npm install -g yarn pm2 && \
+    yarn global add pm2 && \
     cd /rest-on-couch-source && \
     yarn && \
     rm -rf /root/.npm /usr/local/share/.cache /root/.cache /${ROC_VERSION}.tar.gz /rest-on-couch-source/test
