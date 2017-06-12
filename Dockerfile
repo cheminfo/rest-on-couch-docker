@@ -1,6 +1,6 @@
 FROM node:7-alpine
 
-ENV ROC_VERSION 4.2.1
+ENV ROC_VERSION 4.2.2
 
 RUN apk add --no-cache curl && \
     curl -fSL https://github.com/cheminfo/rest-on-couch/archive/v$ROC_VERSION.tar.gz -o $ROC_VERSION.tar.gz && \
