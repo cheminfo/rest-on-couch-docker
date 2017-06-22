@@ -1,4 +1,4 @@
-FROM node:7-alpine
+FROM node:8-alpine
 
 ENV ROC_VERSION 4.2.2
 
