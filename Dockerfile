@@ -1,9 +1,9 @@
-FROM node:8-alpine
+FROM node:10-alpine
 
 ENV NODE_ENV production
 ENV REST_ON_COUCH_HOME_DIR /rest-on-couch
 
-ENV ROC_VERSION 5.5.1
+ENV ROC_VERSION 5.6.0
 
 RUN apk add --no-cache curl && \
     curl -fSL https://github.com/cheminfo/rest-on-couch/archive/v$ROC_VERSION.tar.gz -o $ROC_VERSION.tar.gz && \
