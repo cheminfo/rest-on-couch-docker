@@ -1,4 +1,4 @@
-FROM node:10-alpine
+FROM node:10
 
 ENV NODE_ENV production
 ENV REST_ON_COUCH_HOME_DIR /rest-on-couch
