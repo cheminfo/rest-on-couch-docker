@@ -1,6 +1,6 @@
 FROM node:10 as builder
 
-ENV ROC_VERSION 6.0.0
+ENV ROC_VERSION 7.0.0
 
 RUN curl -fSL https://github.com/cheminfo/rest-on-couch/archive/v$ROC_VERSION.tar.gz -o $ROC_VERSION.tar.gz && \
   tar -xzf $ROC_VERSION.tar.gz && \
